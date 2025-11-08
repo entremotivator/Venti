@@ -13,10 +13,10 @@ st.set_page_config(
     layout="centered"
 )
 
-WEBHOOK_URL = "https://agentonline-u29564.vm.elestio.app/webhook/59097f82-c1e4-44ff-b2c3-09d2f9a2ea20"
+WEBHOOK_URL = "https://agentonline-u29564.vm.elestio.app/webhook/Venti"
 
 # ------------------------------
-# Bold Gold Theme Styling
+# Ultra Bold Gold Theme Styling
 # ------------------------------
 st.markdown("""
 <style>
@@ -24,12 +24,12 @@ body {
     background: linear-gradient(135deg, #fff8e1, #ffecb3);
     color: #3b2f0a;
     font-family: 'Inter', sans-serif;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 h1, h2, h3, h4, h5, h6, p, div, span {
-    font-weight: 800 !important;
-    letter-spacing: 0.5px;
+    font-weight: 900 !important;
+    letter-spacing: 0.6px;
 }
 
 .stChatInputContainer {
@@ -40,47 +40,53 @@ h1, h2, h3, h4, h5, h6, p, div, span {
 
 .user-msg {
     background: linear-gradient(90deg, #ffefc1, #ffd54f);
-    padding: 16px 20px;
+    padding: 18px 24px;
     border-radius: 14px 14px 4px 14px;
     text-align: right;
-    margin: 8px 0;
-    color: #3b2f0a;
-    font-size: 18px;
-    font-weight: 800;
-    box-shadow: 0 4px 12px rgba(232,180,40,0.15);
+    margin: 10px 0;
+    color: #2d2209;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.5;
+    box-shadow: 0 6px 16px rgba(232,180,40,0.2);
+    letter-spacing: 0.4px;
 }
 
 .ai-msg {
     background: linear-gradient(90deg, #fff, #fff8e1);
-    padding: 16px 20px;
-    border-left: 6px solid #e5b800;
+    padding: 18px 24px;
+    border-left: 8px solid #e5b800;
     border-radius: 14px 14px 14px 4px;
-    margin: 8px 0;
-    font-size: 18px;
-    font-weight: 800;
-    box-shadow: 0 4px 12px rgba(232,180,40,0.15);
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.5;
+    box-shadow: 0 6px 16px rgba(232,180,40,0.2);
+    color: #2d2209;
+    letter-spacing: 0.4px;
 }
 
 .timestamp {
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 800;
     color: #6d5e3a;
-    margin-top: 4px;
+    margin-top: 6px;
+    letter-spacing: 0.3px;
 }
 
 .stButton>button {
     background: linear-gradient(90deg, #f6d365, #fda085);
     border: none;
     border-radius: 10px;
-    font-weight: 800;
+    font-weight: 900;
     color: #3b2f0a;
-    font-size: 16px;
-    letter-spacing: 0.4px;
+    font-size: 17px;
+    letter-spacing: 0.5px;
 }
 
 .stTextInput>div>div>input, textarea {
-    font-size: 16px !important;
-    font-weight: 700 !important;
+    font-size: 17px !important;
+    font-weight: 800 !important;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -94,8 +100,8 @@ if "messages" not in st.session_state:
 # ------------------------------
 # Header
 # ------------------------------
-st.markdown("<h1 style='text-align:center; font-size:42px;'>🌟 Venti AI</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align:center; font-size:22px;'>Your Bold Social Experience Creator — turn ideas into stunning posts, campaigns, and stories.</p>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align:center; font-size:44px; font-weight:900;'>🌟 Venti AI</h1>", unsafe_allow_html=True)
+st.markdown("<p style='text-align:center; font-size:23px; font-weight:900;'>Your Bold Social Experience Creator — turn ideas into stunning posts, campaigns, and stories.</p>", unsafe_allow_html=True)
 st.markdown("---")
 
 # ------------------------------
@@ -151,6 +157,6 @@ if user_input:
 # ------------------------------
 st.markdown("---")
 st.markdown(
-    "<p style='text-align:center; font-size:15px; font-weight:800; color:#5c4b1f;'>✨ Venti AI · Bold Conversations for Creative Minds · © 2025</p>",
+    "<p style='text-align:center; font-size:16px; font-weight:900; color:#5c4b1f;'>✨ Venti AI · Bold Conversations for Creative Minds · © 2025</p>",
     unsafe_allow_html=True
 )
