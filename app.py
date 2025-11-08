@@ -13,7 +13,7 @@ st.set_page_config(
     layout="centered"
 )
 
-WEBHOOK_URL = "https://agentonline-u29564.vm.elestio.app/webhook/Venti"
+WEBHOOK_URL = "https://agentonline-u29564.vm.elestio.app/webhook/59097f82-c1e4-44ff-b2c3-09d2f9a2ea20"
 
 # ------------------------------
 # Ultra Bold Gold Theme Styling
@@ -137,13 +137,30 @@ if user_input:
         response = requests.post(WEBHOOK_URL, json=payload, timeout=15)
         if response.status_code == 200:
             data = response.json()
-            reply = (
-                data.get("reply")
-                or data.get("response")
-                or data.get("text")
-                or data.get("message")
-                or json.dumps(data, indent=2)
-            )
+            
+            # Handle both dict and list responses
+            if isinstance(data, dict):
+                reply = (
+                    data.get("reply")
+                    or data.get("response")
+                    or data.get("text")
+                    or data.get("message")
+                    or json.dumps(data, indent=2)
+                )
+            elif isinstance(data, list):
+                # If it's a list, try to extract text from first item or stringify
+                if len(data) > 0 and isinstance(data[0], dict):
+                    reply = (
+                        data[0].get("reply")
+                        or data[0].get("response")
+                        or data[0].get("text")
+                        or data[0].get("message")
+                        or json.dumps(data, indent=2)
+                    )
+                else:
+                    reply = json.dumps(data, indent=2)
+            else:
+                reply = str(data)
         else:
             reply = f"⚠️ Webhook returned {response.status_code}."
     except Exception as e:
