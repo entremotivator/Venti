@@ -125,7 +125,7 @@ if user_input:
         reply = f"⚠️ Unable to connect to webhook: {e}"
 
     st.session_state.messages.append({"role": "assistant", "content": reply, "time": datetime.now().strftime("%I:%M %p")})
-    st.experimental_rerun()
+    st.rerun()
 
 # ------------------------------
 # Footer
