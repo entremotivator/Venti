@@ -13,7 +13,8 @@ st.set_page_config(
     layout="centered"
 )
 
-WEBHOOK_URL = "https://agentonline-u29564.vm.elestio.app/webhook/Venti"
+WEBHOOK_URL = "
+https://agentonline-u29564.vm.elestio.app/webhook-test/Venti"
 
 # ------------------------------
 # Ultra Bold Gold Theme Styling
